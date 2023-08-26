@@ -1,0 +1,29 @@
+/* Typography | Global */
+:root {
+    /* body font size */
+    @text-base-size: 1rem;
+  
+    /* type scale */
+    @text-scale-ratio: 1.2;
+    @text-xs: calc((@text-base-size / @text-scale-ratio) / @text-scale-ratio);
+    @text-sm: calc(@text-xs * @text-scale-ratio);
+    @text-md: calc((@text-sm * @text-scale-ratio) * @text-scale-ratio);
+    @text-lg: calc(@text-md * @text-scale-ratio);
+    @text-xl: calc(@text-lg * @text-scale-ratio);
+    @text-xxl: calc(@text-xl * @text-scale-ratio);
+  }
+  
+  @media (min-width: 64rem) { /* responsive decision applied to all text elements */
+    :root {
+      @text-base-size: 1.25rem;
+      @text-scale-ratio: 1.25;
+    }
+  }
+  
+  h1, .text-xxl   { font-size: @text-xxl }
+  h2, .text-xl    { font-size: @text-xl }
+  h3, .text-lg    { font-size: @text-lg }
+  h4, .text-md    { font-size: @text-md }
+  .text-base      { font-size: @text-base-size }
+  small, .text-sm { font-size: @text-sm }
+  .text-xs        { font-size: @text-xs }

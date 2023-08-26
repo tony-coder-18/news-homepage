@@ -1,0 +1,28 @@
+/* Spacing | Global */
+:root {
+    @space-unit: 1rem;
+    @space-xs:   calc(0.5 * @space-unit);
+    @space-sm:   calc(0.75 * @space-unit);
+    @space-md:   calc(1.25 * @space-unit);
+    @space-lg:   calc(2 * @space-unit);
+    @space-xl:   calc(3.25 * @space-unit);
+  }
+  
+  /* responsive rule affecting all spacing variables */
+  @media (min-width: 64rem) {
+    :root {
+      @space-unit:  1.25rem; /* 👇 this responsive decision affects all margins and paddings */
+    }
+  }
+  /* margin and padding util classes - apply spacing variables */
+  .margin-xs { margin: @space-xs }
+  .margin-sm { margin: @space-sm }
+  .margin-md { margin: @space-md }
+  .margin-lg { margin: @space-lg }
+  .margin-xl { margin: @space-xl }
+  
+  .padding-xs { padding: @space-xs }
+  .padding-sm { padding: @space-sm }
+  .padding-md { padding: @space-md }
+  .padding-lg { padding: @space-lg }
+  .padding-xl { padding: @space-xl }
